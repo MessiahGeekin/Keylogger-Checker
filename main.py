@@ -8,6 +8,7 @@ def load_json_file():
         suspicious_keywords = json.load(file)
     return suspicious_keywords
 
+
 def custom_wordlist(path):
     keywords = []
     if os.path.exists(path):
@@ -24,6 +25,7 @@ def custom_wordlist(path):
     else:
         print("Wordlist file not found.")
     return keywords
+    
 
 def checking(keywords):
     c = 0
@@ -44,6 +46,7 @@ def checking(keywords):
 
     pk = "\n".join(potential_keyloggers)
     return pk, f"\n{c} potential keyloggers!"
+
 
 def main():
     print("Keylogger Detection Script\n")
